@@ -27,6 +27,16 @@ public class Main {
         else{
             System.out.println(Arrays.toString(twoSumResult));
         }
-    }
 
+        // Object of TwoSumHashMap class
+        TwoSumHashMap twoSumHashMap = new TwoSumHashMap();
+        int[] twoSumHashMapResult = twoSumHashMap.twoSumHashMap(nums, target);
+        if ( twoSumHashMapResult.length == 0){
+            System.out.println("No matching pair found such that their sum gives the target value");
+        }
+        else{
+            System.out.println(Arrays.toString(twoSumHashMapResult));
+        }
+
+    }
 }
