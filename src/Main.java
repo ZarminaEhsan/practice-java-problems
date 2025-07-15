@@ -8,51 +8,25 @@ import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
+
         String s = "aaabbc";
-        maxDifference(s);
+
+        // Object of MaxDifference class
+        MaxDifference maxDifference = new MaxDifference();
+        maxDifference.maxDifference(s);
+
+        int[] nums = {2,7,11,15};
+        int target = 26;
+
+        // Object of TwoSum class
+        TwoSum twoSum = new TwoSum();
+        int[] twoSumResult = twoSum.twoSum(nums, target);
+        if ( twoSumResult[0] == -1){
+            System.out.println("No matching pair found such that their sum gives the target value");
+        }
+        else{
+            System.out.println(Arrays.toString(twoSumResult));
+        }
     }
 
-    public static int maxDifference(String s) {
-
-        try {
-            if (3 <= s.length() && s.length() <= 100) {
-                return 0;
-            }
-        } catch (ArrayIndexOutOfBoundsException e) {
-            System.out.println("Error: Index out of bounds");
-        }
-
-        String lowerCase = s.toLowerCase();
-        HashMap<Character, Integer> charCountMap = new HashMap<>();
-
-        for (char c : s.toCharArray()) {
-            if (charCountMap.containsKey(c)) {
-                charCountMap.put(c, charCountMap.get(c) + 1);
-            } else {
-                charCountMap.put(c, 1);
-            }
-        }
-
-
-        for (Map.Entry<Character, Integer> entry : charCountMap.entrySet()) {
-            System.out.println(entry.getKey() + " " + entry.getValue());
-        }
-
-
-        int maxOdd = 0;
-        int maxEven = 0;
-
-        for (int freq : charCountMap.values()) {
-            if (freq % 2 == 0) {
-                maxEven = Math.max(maxEven, freq);
-            } else {
-                maxOdd = Math.max(maxOdd, freq);
-            }
-        }
-
-        int diff = maxOdd - maxEven;
-
-        return diff;
-
-    }
 }
