@@ -15,10 +15,10 @@ public class TwoSum {
 
         // Constraint check 3: Target range
         if (target < -1_000_000_000|| target > 1_000_000_000) {
-            throw new IllegalArgumentException("The target value must be between 2 and 10,000.");
+            throw new IllegalArgumentException("The target value must be between -1000000000 and 1000000000.");
         }
 
-        //return indices of the two numbers such that they add up to target
+        //return indices of the two numbers such that they add up to target using brute force method
         for (int i = 0; i < nums.length; i++ ){
             for (int j = i + 1 ; j < nums.length; j++){
                 if ( nums[i] + nums[j] == target){
