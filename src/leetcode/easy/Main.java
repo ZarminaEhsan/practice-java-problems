@@ -1,6 +1,8 @@
+package leetcode.easy;
+
 /*
 Maximum difference between Even and Odd Frequency
- */
+*/
 
 // import the HashMap class
 import java.util.*;
@@ -11,14 +13,14 @@ public class Main {
 
         String s = "aaabbc";
 
-        // Object of MaxDifference class
+        // Object of leetcode.easy.addition.MaxDifference class
         MaxDifference maxDifference = new MaxDifference();
         maxDifference.maxDifference(s);
 
         int[] nums = {2,7,11,15};
         int target = 26;
 
-        // Object of TwoSum class
+        // Object of leetcode.easy.addition.TwoSum class
         TwoSum twoSum = new TwoSum();
         int[] twoSumResult = twoSum.twoSum(nums, target);
         if ( twoSumResult[0] == -1){
@@ -28,7 +30,7 @@ public class Main {
             System.out.println(Arrays.toString(twoSumResult));
         }
 
-        // Object of TwoSumHashMap class
+        // Object of leetcode.easy.addition.TwoSumHashMap class
         TwoSumHashMap twoSumHashMap = new TwoSumHashMap();
         int[] twoSumHashMapResult = twoSumHashMap.twoSumHashMap(nums, target);
         if ( twoSumHashMapResult.length == 0){
@@ -37,6 +39,13 @@ public class Main {
         else{
             System.out.println(Arrays.toString(twoSumHashMapResult));
         }
+
+        // Object of leetcode.easy.addition.CummulativeSum class
+        CummulativeSum cummulativeSum = new CummulativeSum();
+
+        nums = new int[] {1,2,3,4};
+        int[] runningSumResult = cummulativeSum.runningSum(nums);
+        System.out.println("Running sums result is " + Arrays.toString(nums));
 
     }
 }

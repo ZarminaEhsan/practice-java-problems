@@ -1,3 +1,5 @@
+package leetcode.easy;
+
 import java.util.HashMap;
 
 public class MaxDifference {
