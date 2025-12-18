@@ -87,7 +87,7 @@ public class RockPaperScissors extends JPanel
 
         int randomIndex = random.nextInt(cpuChoiceList.length);
         String cpuChoice = cpuChoiceList[randomIndex];
-        System.out.println("CPU chose " + playerChoice);
+        System.out.println("CPU chose " + cpuChoice);
         cpuChoiceLabel.setText("CPU chose " + cpuChoice);
 
         if(playerChoice.equals(cpuChoice)){
